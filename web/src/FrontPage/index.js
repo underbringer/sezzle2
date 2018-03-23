@@ -6,7 +6,7 @@ class Frontpage extends React.Component {
     super(props);
     this.isAuthenticated = this.props.isAuthenticated.bind(this);
     this.state = {
-      endpoint:"http://192.168.0.103:3001",
+      endpoint:"https://powerful-tundra-98489.herokuapp.com/",
       answers:[],
       equation:'',
       chosenNumber: 0,
@@ -86,26 +86,6 @@ class Frontpage extends React.Component {
       });
     }
   }
-  // downLoad(){
-  //   var myHeaders2 = new Headers();
-  //   myHeaders2.append('Content-Type', 'application/json');
-  //   let myRequest2 = new Request('/api/db/find', {
-  //     method: 'POST',
-  //     headers: myHeaders2,
-  //   });
-  //   fetch(myRequest2)
-  //   .then(response => {
-  //     if (!response.ok) {
-  //     }
-  //     return response;
-  //   })
-  //   .then(res =>res.json())
-  //   .then(json =>this.setState({answers:json.ans}))
-  //   .then(console.log(this.state.answers))
-  //   .catch(function (error) {
-  //     console.error(error);
-  //   });
-  // }
   upLoad(answer){
     // console.log(this.props.profile.nickname);
     var myHeaders = new Headers();
